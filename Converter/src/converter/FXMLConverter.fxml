@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="256.0" maxWidth="281.0" minHeight="256.0" minWidth="281.0" prefHeight="256.0" prefWidth="281.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="converter.FXMLConverterController">
+   <children>
+      <Slider fx:id="slider" blockIncrement="0.01" max="2.0" prefHeight="14.0" prefWidth="187.0" showTickLabels="true" showTickMarks="true">
+         <opaqueInsets>
+            <Insets left="20.0" right="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </Slider>
+      <HBox prefHeight="26.0" prefWidth="281.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Conversion Rate: " />
+            <Label fx:id="text_conversion" text="rate" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="38.0" prefWidth="310.0" spacing="35.0">
+         <children>
+            <Label text="Input">
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="text_input" prefHeight="25.0" prefWidth="78.0" />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="39.0" prefWidth="310.0" spacing="25.0">
+         <children>
+            <Label text="Output">
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="text_output" prefHeight="25.0" prefWidth="78.0" />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="310.0" spacing="10.0">
+         <children>
+            <Button fx:id="button_convert" mnemonicParsing="false" onAction="#convert" text="Convert" />
+            <Button mnemonicParsing="false" onAction="#clear" text="Clear" />
+         </children>
+      </HBox>
+      <Line endX="-75.0" scaleX="1.5" startX="90.0" stroke="#d7d4d4" translateX="60.0" />
+      <CheckBox fx:id="checkbox_auto" alignment="CENTER" mnemonicParsing="false" onAction="#checkAuto" text="Automatic conversion:">
+         <VBox.margin>
+            <Insets left="10.0" top="15.0" />
+         </VBox.margin>
+      </CheckBox>
+   </children>
+</VBox>
